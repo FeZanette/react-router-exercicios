@@ -1,7 +1,15 @@
+import { useParams } from "react-router-dom";
+import Header from "../components/Header";
+
 function ProfilePage() {
+
+  const {name, id} = useParams()
+
   return (
     <section>
-      <h1>Página de perfil</h1>
+      <Header/>
+      <h1>Página de {name}</h1>
+      <h3> O id de {name} é {id} </h3>
     </section>
   );
 }
